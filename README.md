@@ -7,9 +7,9 @@ Wenn ein Dienst ausfällt, was normalerweise nicht vorkommen sollte, jedoch ab u
 
 In der Mail erhält der Administrator Informationen zum Status des Dienstes der ausgefallen ist und ob dieser Dienst durch dieses Skript wieder gestartet werden konnte.
 
-##Installation & How to use
+## Installation & How to use
 
-###Preparations
+### Preparations
 Download the file "fvb-plesk-service-check.sh" from this repository and save it to your server.
 
 Open the script in an editor, eg. For example, enter nano or vim and enter the administrator's e-mail address for the adminEmail variable.
@@ -30,11 +30,12 @@ Afterwards the execution rights have to be given to the script (as root):
 
 chmod +x fvb-plesk-service-check.sh
 
-###Check if script is working...
+### Check if script is working...
 
 Execute as root in your console:
 
 ./fvb-plesk-service-check.sh
 
-###Ad script to your cron task list in Plesk
+### Ad script to your cron task list in Plesk
 
+Login into Plesk Panel
