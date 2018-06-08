@@ -1,5 +1,6 @@
 # Plesk service check shell script for use as cronjob
 View README better formated: https://fbroen.github.io/plesk-service-checker/
+
 More useful posts from me on my blog: https://it-fvb.de/blog/
 
 I developed this shell script for Linux operating systems with Plesk so that I can regularly check certain services automatically via a cron job.
@@ -44,12 +45,17 @@ Log in to Plesk as an administrator.
 Go to: Tools & Settings -> Scheduled Tasks -> Add Task
 
 Task type: execute command
-Command: /var/www/vhosts/fvb-plesk-service-check.sh
-Run: Cron style
-Right next to cron style: * / 5 * * * *
-System user: root
-Description: Plesk Service Checker
-Notify: Only errors
 
+Command: /var/www/vhosts/fvb-plesk-service-check.sh
+
+Run: Cron style
+
+Right next to cron style: * / 5 * * * *
+
+System user: root
+
+Description: Plesk Service Checker
+
+Notify: Only errors
 
 Have fun...
