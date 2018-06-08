@@ -1,11 +1,12 @@
 # Plesk service check shell script for use as cronjob
 View README better formated: https://fbroen.github.io/plesk-service-checker/
+More useful posts from me on my blog: https://it-fvb.de/blog/
 
-Dieses Shell-Script für Linux-Betriebssysteme mit Plesk wurde von mir entwickelt, damit automatisch über einen Cronjob regelmäßig bestimmte Dienste geprüft werden können.
+I developed this shell script for Linux operating systems with Plesk so that I can regularly check certain services automatically via a cron job.
 
-Wenn ein Dienst ausfällt, was normalerweise nicht vorkommen sollte, jedoch ab und zu vorkommt, dann sorgt dieser Cronjob dafür, dass der Dienst wieder gestartet wird und eine Mail an den Administrator verschickt wird.
+If a service fails, which should not happen normally, but sometimes happens, then this cron job ensures that the service is restarted and a mail is sent to the administrator.
 
-In der Mail erhält der Administrator Informationen zum Status des Dienstes der ausgefallen ist und ob dieser Dienst durch dieses Skript wieder gestartet werden konnte.
+In the mail, the administrator receives information about the status of the service that has failed and whether this service could be restarted by this script.
 
 ## Installation & How to use
 
@@ -38,4 +39,17 @@ Execute as root in your console:
 
 ### Ad script to your cron task list in Plesk
 
-Login into Plesk Panel
+Log in to Plesk as an administrator.
+
+Go to: Tools & Settings -> Scheduled Tasks -> Add Task
+
+Task type: execute command
+Command: /var/www/vhosts/fvb-plesk-service-check.sh
+Run: Cron style
+Right next to cron style: * / 5 * * * *
+System user: root
+Description: Plesk Service Checker
+Notify: Only errors
+
+
+Have fun...
