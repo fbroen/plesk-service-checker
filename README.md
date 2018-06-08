@@ -38,7 +38,7 @@ Execute as root in your console:
 
 ./fvb-plesk-service-check.sh
 
-### Ad script to your cron task list in Plesk
+### Add script to your cron task list in Plesk
 
 Log in to Plesk as an administrator.
 
