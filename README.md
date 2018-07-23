@@ -20,13 +20,17 @@ In the variable serviceArray all services are listed separated by blanks, which 
 
 Because there are different services running on each server with Plesk, it is recommended that you issue the following command from the console with root access to see all services:
 
+```bash
 plesk bin service --list -format "\n%s\t%k"
+```
 
 The console lists all installed services. Only the services that have the status code "1" should be entered in the variable serviceArray so that they can be restarted if necessary.
 
 As a storage location for the script on the server, I recommend the following directory:
 
+```bash
 /var/www/vhosts/
+```
 
 Afterwards the execution rights have to be given to the script (as root):
 
@@ -36,7 +40,9 @@ chmod +x fvb-plesk-service-check.sh
 
 Execute as root in your console:
 
+```bash
 ./fvb-plesk-service-check.sh
+```
 
 ### Add script to your cron task list in Plesk
 
@@ -46,11 +52,17 @@ Go to: Tools & Settings -> Scheduled Tasks -> Add Task
 
 Task type: execute command
 
-Command: /var/www/vhosts/fvb-plesk-service-check.sh
+Command:
+```bash
+/var/www/vhosts/fvb-plesk-service-check.sh
+```
 
 Run: Cron style
 
-Right next to cron style: * / 5 * * * *
+Right next to cron style:
+```bash
+* / 5 * * * *
+```
 
 System user: root
 
