@@ -34,7 +34,9 @@ As a storage location for the script on the server, I recommend the following di
 
 Afterwards the execution rights have to be given to the script (as root):
 
+```bash
 chmod +x fvb-plesk-service-check.sh
+```
 
 ### Check if script is working...
 
