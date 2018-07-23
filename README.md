@@ -12,7 +12,7 @@ In the mail, the administrator receives information about the status of the serv
 ## Installation & How to use
 
 ### Preparations
-Download the file "fvb-plesk-service-check.sh" from this repository and save it to your server.
+Download the file "fvb-plesk-service-check.sh" from this repository and save it to your server. (or simply use wget in your /usr/local/bin/ directory: `wget https://raw.githubusercontent.com/fbroen/plesk-service-checker/master/fvb-plesk-service-check.sh`)
 
 Open the script in an editor, eg. For example, enter nano or vim and enter the administrator's e-mail address for the adminEmail variable.
 
@@ -29,13 +29,13 @@ The console lists all installed services. Only the services that have the status
 As a storage location for the script on the server, I recommend the following directory:
 
 ```bash
-/var/www/vhosts/
+/usr/local/bin/
 ```
 
 Afterwards the execution rights have to be given to the script (as root):
 
 ```bash
-chmod +x fvb-plesk-service-check.sh
+chmod u+x fvb-plesk-service-check.sh
 ```
 
 ### Check if script is working...
@@ -56,14 +56,14 @@ Task type: execute command
 
 Command:
 ```bash
-/var/www/vhosts/fvb-plesk-service-check.sh
+/usr/local/bin/fvb-plesk-service-check.sh
 ```
 
 Run: Cron style
 
 Right next to cron style:
 ```bash
-* / 5 * * * *
+*/5 * * * *
 ```
 
 System user: root
